@@ -1,0 +1,11 @@
+{
+ "width": 7,
+ "checkpoint": "C:/Users/UNITYU~1.KQI/AppData/Local/Temp/w7-snap.pt",
+ "input": "compare-input.png",
+ "reference": "compare-torch.png",
+ "size": [
+  256,
+  256
+ ],
+ "torchMean": 123.73
+}

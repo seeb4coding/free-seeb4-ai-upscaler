@@ -1,0 +1,43 @@
+{
+  "name": "seeb4-ai-upscaler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Upscale video and images 2x in the browser. A super-resolution CNN runs on your own GPU via WebGPU \u2014 no upload, no backend, no watermark.",
+  "license": "MIT",
+  "author": "SeeB4 (https://seeb4coding.in)",
+  "homepage": "https://seeb4coding.in/ai-upscaler/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seeb4coding/free-seeb4-ai-upscaler"
+  },
+  "bugs": {
+    "url": "https://github.com/seeb4coding/free-seeb4-ai-upscaler/issues"
+  },
+  "keywords": [
+    "upscaler",
+    "super-resolution",
+    "webgpu",
+    "webcodecs",
+    "video",
+    "image",
+    "anime4k",
+    "browser",
+    "client-side",
+    "wgsl"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@websr/websr": "^0.0.16",
+    "mediabunny": "^1.55.1"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.72",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "/ai-upscaler/",
+  "name": "SeeB4 AI Upscaler",
+  "short_name": "SeeB4 Upscaler",
+  "description": "AI upscale video and images 2x on your own GPU. Your media, your GPU, your privacy.",
+  "start_url": "/ai-upscaler/",
+  "scope": "/ai-upscaler/",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#ffffff",
+  "categories": ["photo", "video", "utilities"],
+  "icons": [
+    {
+      "src": "/ai-upscaler/logo-mark.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/ai-upscaler/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

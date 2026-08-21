@@ -1,0 +1,16 @@
+# SeeB4 AI Upscaler - https://seeb4coding.in/ai-upscaler/
+#
+# Crawlers only read robots.txt from a domain root, so this file is effective
+# only if its rules also appear in https://seeb4coding.in/robots.txt. It is
+# kept here so the rules travel with the app, and so they apply as-is if the
+# app is ever served from its own domain.
+
+User-agent: *
+Allow: /
+
+# Model weights and benchmark fixtures: large binaries with nothing to rank.
+Disallow: /ai-upscaler/assets/
+Disallow: /ai-upscaler/bench/
+Disallow: /ai-upscaler/weights/
+
+Sitemap: https://seeb4coding.in/ai-upscaler/sitemap.xml

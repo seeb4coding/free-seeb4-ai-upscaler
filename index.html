@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SeeB4 AI Upscaler &mdash; Your Media | Your GPU | Your Privacy</title>
+    <meta
+      name="description"
+      content="AI Upscale video and images 2x with a neural network that runs on your own GPU. Nothing is uploaded, nothing is stored, and there is no watermark, account or limit."
+    />
+    <link rel="canonical" href="https://seeb4coding.in/ai-upscaler/" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#7c3aed" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="application-name" content="SeeB4 AI Upscaler" />
+    <meta name="apple-mobile-web-app-title" content="SeeB4 Upscaler" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/logo-mark.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:site_name" content="SeeB4 AI Upscaler" />
+    <meta property="og:title" content="SeeB4 AI Upscaler" />
+    <meta
+      property="og:description"
+      content="AI Upscale video and images 2x on your own GPU. No upload, no account, no watermark."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seeb4coding.in/ai-upscaler/" />
+    <meta property="og:image" content="https://seeb4coding.in/ai-upscaler/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="SeeB4 AI Upscaler" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://seeb4coding.in/ai-upscaler/og.png" />
+    <meta name="twitter:title" content="SeeB4 AI Upscaler" />
+    <meta
+      name="twitter:description"
+      content="Your Media | Your GPU | Your Privacy &mdash; AI upscale video and images 2x on your own GPU."
+    />
+    <!-- Structured data. The FAQPage block is generated from the visible FAQ at
+         build time by scripts/vite-seo.ts, so it cannot drift from the copy. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": "https://seeb4coding.in/ai-upscaler/#app",
+        "name": "SeeB4 AI Upscaler",
+        "url": "https://seeb4coding.in/ai-upscaler/",
+        "description": "AI upscale video and images 2x in the browser. A super-resolution network runs on your own GPU through WebGPU - nothing is uploaded, and there is no account, watermark or limit.",
+        "applicationCategory": "MultimediaApplication",
+        "applicationSubCategory": "Video and image upscaling",
+        "operatingSystem": "Windows, macOS, Linux, ChromeOS",
+        "browserRequirements": "Requires WebGPU and WebCodecs: Chrome, Edge or Opera 113 and newer",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "2x super-resolution for video and images",
+          "Runs locally on your GPU through WebGPU - no upload, no backend",
+          "Three model sizes: fast, balanced and quality",
+          "Keeps the original audio track",
+          "Side-by-side preview before committing to a full run",
+          "MP4 video and PNG image output, with no watermark"
+        ],
+        "image": "https://seeb4coding.in/ai-upscaler/og.png",
+        "screenshot": "https://seeb4coding.in/ai-upscaler/og.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "SeeB4",
+          "url": "https://seeb4coding.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://seeb4coding.in/ai-upscaler/logo-mark.png",
+            "width": 256,
+            "height": 256
+          }
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "SeeB4",
+            "item": "https://seeb4coding.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Upscaler",
+            "item": "https://seeb4coding.in/ai-upscaler/"
+          }
+        ]
+      }
+    </script>
+    <script>
+      try {
+        var t = localStorage.getItem('seeb4-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body id="top">
+    <div class="sheet">
+      <header class="topbar">
+        <a class="brand" href="https://seeb4coding.in">
+          <img
+            class="brand-logo brand-logo--light"
+            src="/logo-word.png"
+            width="720"
+            height="192"
+            alt="SeeB4 AI Upscaler"
+          />
+          <img
+            class="brand-logo brand-logo--dark"
+            src="/logo-word-dark.png"
+            width="720"
+            height="192"
+            alt="SeeB4 AI Upscaler"
+          />
+          <span class="brand-sub">AI Upscaler</span>
+        </a>
+
+        <nav class="topnav">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#models">Models</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header-tools">
+          <span class="badge" id="gpu-badge">checking GPU&hellip;</span>
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Switch colour theme"
+            title="Switch colour theme"
+          >
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+              />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" data-pick>
+            Upscale a file
+            <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+          </button>
+
+          <!-- Below 1080px .topnav has no room, so the same links live in this
+               disclosure instead. A <details> keeps it working before the JS in
+               ui.ts arrives, which only adds close-on-click and Escape. -->
+          <details class="navmenu" id="navmenu">
+            <summary aria-label="Sections" title="Sections">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </summary>
+            <nav class="navmenu-panel" aria-label="Sections">
+              <a href="#how">How it works</a>
+              <a href="#features">Features</a>
+              <a href="#models">Models</a>
+              <a href="#faq">FAQ</a>
+            </nav>
+          </details>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-media" aria-hidden="true">
+            <video id="hero-video" class="hero-video" muted playsinline preload="metadata"></video>
+          </div>
+
+          <div class="hero-copy">
+            <span class="eyebrow">Runs entirely on your GPU</span>
+            <h1>AI Upscale video and images <em>for free</em></h1>
+            <p class="lede">
+              A super-resolution network runs locally through WebGPU. Your file never leaves the
+              browser &mdash; no upload, no account, no watermark and no limit.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-pick>
+                Choose a file
+                <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+              </button>
+              <a class="btn btn-quiet" href="#how">See how it works</a>
+            </div>
+
+            <ul class="promise" aria-label="Your Media, Your GPU, Your Privacy">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+                  <path d="M6 5v14M18 5v14" class="thin" />
+                  <path d="M10.5 9.5 15 12l-4.5 2.5Z" class="solid" />
+                </svg>
+                <span><strong>Your Media</strong></span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="5" y="5" width="14" height="14" rx="2.5" />
+                  <rect x="9" y="9" width="6" height="6" rx="1" />
+                  <path
+                    class="thin"
+                    d="M9 2.5V5M15 2.5V5M9 19v2.5M15 19v2.5M2.5 9H5M2.5 15H5M19 9h2.5M19 15h2.5"
+                  />
+                </svg>
+                <span><strong>Your GPU</strong></span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.6 20 5.4v5.8c0 4.5-3.2 8.3-8 9.9-4.8-1.6-8-5.4-8-9.9V5.4Z" />
+                  <path class="solid" d="M12 10.2a1.7 1.7 0 0 1 .9 3.1v1.8h-1.8v-1.8a1.7 1.7 0 0 1 .9-3.1Z" />
+                  <path d="M9.8 10.4V9.2a2.2 2.2 0 0 1 4.4 0v1.2" />
+                </svg>
+                <span><strong>Your Privacy</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="scrub-hint">Move your cursor to scrub</p>
+        </section>
+
+        <section class="logo-strip" aria-label="Built on">
+          <span>WebGPU</span>
+          <span>WebCodecs</span>
+          <span>WGSL</span>
+          <span>Anime4K</span>
+          <span>MP4</span>
+          <span>PNG</span>
+        </section>
+
+        <section id="unsupported" class="notice error" hidden>
+          <strong>This browser cannot run the upscaler.</strong>
+          <span id="unsupported-detail"></span>
+        </section>
+
+        <section id="step-pick" class="picker">
+          <label class="dropzone" id="dropzone" for="file">
+            <span class="dropzone-icon" aria-hidden="true">&#8593;</span>
+            <span class="dropzone-title">Drop a video or image here</span>
+            <span class="dropzone-sub"
+              >or click to choose &mdash; MP4, WebM, MOV, MKV, PNG, JPEG, WebP</span
+            >
+            <input type="file" id="file" accept="video/*,image/*" hidden />
+          </label>
+        </section>
+
+        <section id="step-settings" class="settings" hidden>
+          <div class="panel preview-panel">
+            <div class="compare" id="preview-compare" style="--split: 50%">
+              <canvas id="preview-after" class="compare-layer"></canvas>
+              <div class="compare-clip">
+                <canvas id="preview-before" class="compare-layer"></canvas>
+              </div>
+              <div
+                class="compare-divider"
+                id="preview-divider"
+                role="slider"
+                tabindex="0"
+                aria-label="Comparison split"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="50"
+              >
+                <span class="grip" aria-hidden="true"></span>
+              </div>
+              <span class="compare-tag left" id="tag-before">Original</span>
+              <span class="compare-tag right" id="tag-after">Upscaled</span>
+              <div class="zoombar" id="preview-zoom"></div>
+              <div class="preview-busy" id="preview-busy" hidden>Rendering preview&hellip;</div>
+            </div>
+            <p class="stage-hint" id="stage-hint">
+              Zoom in to judge the detail &mdash; scroll to zoom, drag to pan, drag the divider to
+              compare.
+            </p>
+            <div class="filmstrip" id="filmstrip" role="tablist" aria-label="Preview frame"></div>
+            <dl class="summary" id="summary"></dl>
+          </div>
+
+          <aside class="panel controls">
+            <div class="field">
+              <span class="field-label">Resolution</span>
+              <div
+                class="segmented"
+                id="resolution"
+                role="radiogroup"
+                aria-label="Resolution"
+              ></div>
+              <p class="field-hint mono" id="resolution-hint"></p>
+            </div>
+
+            <div class="field">
+              <span class="field-label">
+                AI model
+                <button type="button" class="help" id="model-help" aria-label="About the models">
+                  ?
+                </button>
+              </span>
+              <div class="segmented" id="preset" role="radiogroup" aria-label="AI model"></div>
+              <p class="field-hint" id="preset-hint"></p>
+            </div>
+
+            <div class="field">
+              <span class="field-label">Weights</span>
+              <div class="segmented" id="weights" role="radiogroup" aria-label="Weight set"></div>
+              <p class="field-hint" id="weights-hint"></p>
+            </div>
+
+            <div class="actions">
+              <button class="btn btn-primary" id="start">
+                Start upscaling
+                <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+              </button>
+              <button class="btn btn-quiet" id="reset">Choose another file</button>
+            </div>
+          </aside>
+        </section>
+
+        <section id="step-progress" class="panel" hidden>
+          <div class="progress"><div class="progress-fill" id="bar"></div></div>
+          <p class="progress-line" id="progress-text">Preparing&hellip;</p>
+          <p class="field-hint">
+            Keep this tab in the foreground &mdash; background tabs are throttled.
+          </p>
+          <div class="actions">
+            <button class="btn btn-quiet" id="cancel">Cancel</button>
+          </div>
+        </section>
+
+        <section id="step-done" class="panel" hidden>
+          <p class="done-line" id="done-text"></p>
+          <div class="compare" id="result-compare" style="--split: 50%">
+            <video id="after" class="compare-layer" muted loop playsinline></video>
+            <img id="after-img" class="compare-layer" alt="Upscaled result" hidden />
+            <div class="compare-clip">
+              <video id="before" class="compare-layer" muted loop playsinline></video>
+              <img id="before-img" class="compare-layer" alt="Original" hidden />
+            </div>
+            <div
+              class="compare-divider"
+              id="result-divider"
+              role="slider"
+              tabindex="0"
+              aria-label="Comparison split"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+            >
+              <span class="grip" aria-hidden="true"></span>
+            </div>
+            <span class="compare-tag left">Original</span>
+            <span class="compare-tag right">Upscaled</span>
+            <div class="zoombar" id="result-zoom"></div>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="download">
+              <span id="download-label">Download MP4</span>
+              <span class="btn-arrow" aria-hidden="true">&#8595;</span>
+            </button>
+            <button class="btn btn-quiet" id="again">Upscale another</button>
+          </div>
+        </section>
+
+        <div id="landing">
+          <section class="section-head" id="features">
+            <span class="eyebrow eyebrow-center">What you get</span>
+            <h2>Everything runs on your machine</h2>
+            <p class="section-lede">
+              No server, no queue, no upload. The whole pipeline &mdash; decode, inference, encode
+              &mdash; happens inside this tab.
+            </p>
+          </section>
+
+          <section class="cards">
+            <article class="card tint-violet">
+              <span class="card-icon" aria-hidden="true">&#9673;</span>
+              <h3>Private by construction</h3>
+              <p>There is no server to upload to, so the file never leaves your machine.</p>
+              <span class="card-link">Nothing uploaded <span class="dot-arrow">&#8594;</span></span>
+            </article>
+            <article class="card tint-mint">
+              <span class="card-icon" aria-hidden="true">&#9889;</span>
+              <h3>Real GPU inference</h3>
+              <p>WGSL compute shaders through WebGPU &mdash; not a slow CPU fallback.</p>
+              <span class="card-link">Hardware accelerated <span class="dot-arrow">&#8594;</span></span>
+            </article>
+            <article class="card tint-blue">
+              <span class="card-icon" aria-hidden="true">&#9834;</span>
+              <h3>Audio kept intact</h3>
+              <p>Audio is copied through untouched, so sync and quality both survive.</p>
+              <span class="card-link">No re-encoding <span class="dot-arrow">&#8594;</span></span>
+            </article>
+            <article class="card tint-peach">
+              <span class="card-icon" aria-hidden="true">&#9635;</span>
+              <h3>Preview before you commit</h3>
+              <p>Upscale a single frame and zoom to 8&times;. It is the real output.</p>
+              <span class="card-link">Zoom and compare <span class="dot-arrow">&#8594;</span></span>
+            </article>
+          </section>
+
+          <section class="banner">
+            <div class="banner-copy">
+              <h2>Let's make things sharper</h2>
+              <p>
+                Drop in a clip or a photo and watch a neural network rebuild the detail, right here
+                in the browser.
+              </p>
+              <button type="button" class="btn btn-light" data-pick>
+                Upscale a file
+                <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+              </button>
+            </div>
+            <div class="banner-art" aria-hidden="true">
+              <span class="spark spark-1"></span>
+              <span class="spark spark-2"></span>
+              <span class="spark spark-3"></span>
+              <span class="banner-orb"></span>
+            </div>
+          </section>
+
+          <section class="steps" id="how">
+            <span class="eyebrow">How it works</span>
+            <div class="section-row">
+              <h2>Four steps, start to finish</h2>
+            </div>
+            <ol>
+              <li>
+                <span class="step-n">01</span>
+                <h3>Choose a file</h3>
+                <p>Drop in a video or image. It is read locally &mdash; no upload happens.</p>
+              </li>
+              <li>
+                <span class="step-n">02</span>
+                <h3>Compare and tune</h3>
+                <p>Pick a resolution and model, then zoom in to judge the detail.</p>
+              </li>
+              <li>
+                <span class="step-n">03</span>
+                <h3>Upscale</h3>
+                <p>The network runs over every frame on your GPU and writes a new file.</p>
+              </li>
+              <li>
+                <span class="step-n">04</span>
+                <h3>Download</h3>
+                <p>Save the result. No watermark, no limit, nothing kept.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="models-section" id="models">
+            <span class="eyebrow">Models</span>
+            <div class="section-row">
+              <h2>Pick your trade-off</h2>
+              <a class="see-all" href="#faq">Read the FAQ <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <div class="stats">
+              <article class="stat tint-mint">
+                <span class="stat-icon" aria-hidden="true">&#9889;</span>
+                <h3>Fast</h3>
+                <p class="stat-figure">8,612</p>
+                <p>Eight channels. Best for long clips and modest GPUs.</p>
+              </article>
+              <article class="stat tint-violet">
+                <span class="stat-icon" aria-hidden="true">&#9678;</span>
+                <h3>Balanced</h3>
+                <p class="stat-figure">31,036</p>
+                <p>Sixteen channels. The sensible default for most files.</p>
+              </article>
+              <article class="stat tint-peach">
+                <span class="stat-icon" aria-hidden="true">&#10022;</span>
+                <h3>Quality</h3>
+                <p class="stat-figure">90,592</p>
+                <p>Twenty-eight channels. For detail-critical work.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="faq" id="faq">
+            <span class="eyebrow">Questions</span>
+            <div class="section-row">
+              <h2>Good to know</h2>
+            </div>
+            <details>
+              <summary>Is my file uploaded anywhere?</summary>
+              <p>
+                No. There is no backend. The page is a static bundle and everything runs inside the
+                tab &mdash; you can disconnect from the network after it loads and it still works.
+              </p>
+            </details>
+            <details>
+              <summary>What do I need to run it?</summary>
+              <p>
+                A browser with WebGPU and WebCodecs &mdash; Chrome, Edge or Opera 113 and newer
+                &mdash; on a machine with a GPU. The badge in the header tells you whether you are
+                good to go.
+              </p>
+            </details>
+            <details>
+              <summary>How much can it enlarge?</summary>
+              <p>
+                The networks output exactly 2&times;. Lower rungs such as 1080p come from resampling
+                that result. Anything beyond 2&times; would be interpolation rather than
+                reconstruction, so it is not offered.
+              </p>
+            </details>
+            <details>
+              <summary>Which formats work?</summary>
+              <p>
+                Any video your browser can decode &mdash; typically H.264 MP4, WebM and MOV &mdash;
+                plus PNG, JPEG and WebP images. Output is MP4 for video and PNG for stills. HDR and
+                10-bit video are not supported.
+              </p>
+            </details>
+            <details>
+              <summary>Why is it slower on some files?</summary>
+              <p>
+                Every frame runs through the network on your GPU, so time scales with resolution,
+                length and the model you pick. Large images are processed in tiles to bound memory
+                use. Keep the tab in the foreground &mdash; browsers throttle background tabs.
+              </p>
+            </details>
+          </section>
+
+          <section class="cta-bar">
+            <span class="cta-icon" aria-hidden="true">&#9635;</span>
+            <div class="cta-copy">
+              <h3>Ready to sharpen something?</h3>
+              <p>Free, private, and it starts the moment you drop a file in.</p>
+            </div>
+            <button type="button" class="btn btn-primary" data-pick>
+              Let's go
+              <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+            </button>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <a class="brand" href="https://seeb4coding.in">
+          <img
+            class="brand-logo brand-logo--light"
+            src="/logo-word.png"
+            width="720"
+            height="192"
+            alt="SeeB4 AI Upscaler"
+          />
+          <img
+            class="brand-logo brand-logo--dark"
+            src="/logo-word-dark.png"
+            width="720"
+            height="192"
+            alt="SeeB4 AI Upscaler"
+          />
+          <span class="brand-sub">Your Media &middot; Your GPU &middot; Your Privacy</span>
+        </a>
+        <nav class="footer-links">
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#models">Models</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://seeb4coding.in">seeb4coding.in</a>
+        </nav>
+      </footer>
+    </div>
+
+    <p class="colophon">
+      Built on <a href="https://github.com/sb2702/websr">WebSR</a> and
+      <a href="https://github.com/Vanilagy/mediabunny">Mediabunny</a>. Your file never leaves this
+      device.
+    </p>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
