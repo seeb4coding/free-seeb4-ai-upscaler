@@ -5,6 +5,8 @@
 
 **Your Media | Your GPU | Your Privacy**
 ---
+[![GitHub](https://img.shields.io/badge/GitHub-free--seeb4--ai--upscaler-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/seeb4coding/free-seeb4-ai-upscaler)
+[![Free and open source](https://img.shields.io/badge/free-open%20source-8957e5?style=flat-square)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/seeb4coding/free-seeb4-ai-upscaler/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/seeb4coding/free-seeb4-ai-upscaler/actions/workflows/ci.yml)
 [![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue?style=flat-square)](LICENSE)
 [![Live demo](https://img.shields.io/badge/live-seeb4coding.in-00a3a3?style=flat-square)](https://seeb4coding.in/ai-upscaler/)
