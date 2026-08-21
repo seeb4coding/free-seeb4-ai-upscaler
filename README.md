@@ -4,6 +4,13 @@
 # SeeB4 AI Upscaler
 
 **Your Media | Your GPU | Your Privacy**
+[![CI](https://img.shields.io/github/actions/workflow/status/seeb4coding/free-seeb4-ai-upscaler/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/seeb4coding/free-seeb4-ai-upscaler/actions/workflows/ci.yml)
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue?style=flat-square)](LICENSE)
+[![Live demo](https://img.shields.io/badge/live-seeb4coding.in-00a3a3?style=flat-square)](https://seeb4coding.in/ai-upscaler/)
+[![WebGPU](https://img.shields.io/badge/WebGPU-WGSL-005a9c?style=flat-square)](https://www.w3.org/TR/webgpu/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?style=flat-square&logo=typescript&logoColor=white)](tsconfig.json)
+[![Backend: none](https://img.shields.io/badge/backend-none-brightgreen?style=flat-square)](#why-it-exists)
+
 
 AI Upscale video and images 2× in the browser. A super-resolution CNN runs on your
 own GPU through WebGPU — there is no backend, nothing is uploaded, and there is
