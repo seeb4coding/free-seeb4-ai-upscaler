@@ -1,5 +1,5 @@
-<img src="brand/logo.png#gh-light-mode-only" alt="SeeB4 AI Upscaler" width="520">
-<img src="brand/logo-dark.png#gh-dark-mode-only" alt="SeeB4 AI Upscaler" width="520">
+<img src="brand/logo.png#gh-light-mode-only" alt="SeeB4 AI Upscaler" width="250">
+<img src="brand/logo-dark.png#gh-dark-mode-only" alt="SeeB4 AI Upscaler" width="250">
 
 # SeeB4 AI Upscaler
 
